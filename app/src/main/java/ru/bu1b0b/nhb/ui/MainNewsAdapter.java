@@ -1,4 +1,4 @@
-package ru.bu1b0b.nhb.ui.news;
+package ru.bu1b0b.nhb.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,15 +12,16 @@ import java.util.List;
 
 import ru.bu1b0b.nhb.R;
 import ru.bu1b0b.nhb.model.News;
+import ru.bu1b0b.nhb.ui.news.NewsActivitity;
 
 
-public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
+public class MainNewsAdapter extends RecyclerView.Adapter<MainNewsAdapter.NewsViewHolder> {
 
     private List<News> newsList;
     private Context context;
     private LayoutInflater inflater;
 
-    public NewsAdapter(Context context, List<News> newsList) {
+    public MainNewsAdapter(Context context, List<News> newsList) {
         this.context = context;
         this.newsList = newsList;
         inflater = LayoutInflater.from(context);
