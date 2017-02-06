@@ -1,6 +1,10 @@
 <resources>
+
     <string name="app_name">Новости ХБ</string>
 
     <string name="loading">Загрузка</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-4899358131893161/7438946536</string>
+
 
 </resources>

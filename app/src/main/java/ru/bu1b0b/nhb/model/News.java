@@ -37,8 +37,5 @@ public class News {
         this.links = links;
     }
 
-    @Override
-    public int hashCode() {
-        return title.hashCode();
-    }
+
 }

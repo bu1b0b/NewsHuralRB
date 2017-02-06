@@ -1,0 +1,78 @@
+{
+  "project_info": {
+    "project_number": "121562045795",
+    "firebase_url": "https://admob-app-id-8552060535.firebaseio.com",
+    "project_id": "admob-app-id-8552060535",
+    "storage_bucket": "admob-app-id-8552060535.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121562045795:android:b213cc0019c4e8f5",
+        "android_client_info": {
+          "package_name": "game.fifteen.ru.fifteenbeta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121562045795-dci7ftk45c9p7dkj6kctlctvj7r8q6c9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaF-lReZqXrQvUPMV_vBa7myxWg8qa6Qk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121562045795:android:5a4f1f9045c1d367",
+        "android_client_info": {
+          "package_name": "ru.bu1b0b.nhb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121562045795-dci7ftk45c9p7dkj6kctlctvj7r8q6c9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaF-lReZqXrQvUPMV_vBa7myxWg8qa6Qk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "121562045795-dci7ftk45c9p7dkj6kctlctvj7r8q6c9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

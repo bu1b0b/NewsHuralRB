@@ -38,14 +38,14 @@ public class MainNewsAdapter extends RecyclerView.Adapter<MainNewsAdapter.NewsVi
         News currentNews = newsList.get(position);
         holder.news_title.setText(currentNews.getTitle());
         holder.news_published.setText(currentNews.getPublished());
-        holder.itemView.setOnClickListener(new View.OnClickListener(){
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, NewsActivitity.class);
                 intent.putExtra("newsTitle", newsList.get(position).getTitle());
                 intent.putExtra("newsLink", newsList.get(position).getLinks());
                 intent.putExtra("newsPublished", newsList.get(position).getPublished());
-                context.startActivity(intent);
+                ((MainActivity) context).startInterstitialAd(intent);
             }
         });
 
@@ -56,7 +56,7 @@ public class MainNewsAdapter extends RecyclerView.Adapter<MainNewsAdapter.NewsVi
         return newsList.size();
     }
 
-    public class NewsViewHolder extends RecyclerView.ViewHolder{
+    public class NewsViewHolder extends RecyclerView.ViewHolder {
 
         public TextView news_title;
         public TextView news_published;
