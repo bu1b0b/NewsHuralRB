@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import ru.bu1b0b.nhb.R;
 
 
-
 public class BaseActivity extends AppCompatActivity {
 
     public ProgressDialog mProgressDialog;
@@ -24,6 +23,7 @@ public class BaseActivity extends AppCompatActivity {
     public void hideProgressDialog() {
         if (mProgressDialog != null && mProgressDialog.isShowing()) {
             mProgressDialog.dismiss();
+            mProgressDialog = null;
         }
     }
 
