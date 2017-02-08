@@ -7,8 +7,8 @@ android {
         applicationId "ru.bu1b0b.nhb"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 5
-        versionName "1.0.5"
+        versionCode 6
+        versionName "1.0.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -25,8 +25,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-
-
+    compile 'com.yandex.android:speechkit:2.5.0'
 
     compile 'org.jsoup:jsoup:1.10.2'
     compile 'com.android.support:appcompat-v7:25.1.1'
@@ -35,8 +34,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.1.1'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.google.firebase:firebase-ads:10.0.1'
+
     testCompile 'junit:junit:4.12'
 }
-
 
 apply plugin: 'com.google.gms.google-services'

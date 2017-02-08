@@ -9,7 +9,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -28,6 +27,8 @@ import ru.bu1b0b.nhb.model.News;
 import ru.bu1b0b.nhb.ui.base.BaseActivity;
 
 public class MainActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener {
+
+    private static final String InterstitialAd_KEY = "ca-app-pub-4899358131893161/2729545339";
 
     private InterstitialAd interstitial;
     private AdView mAdView;
@@ -54,7 +55,7 @@ public class MainActivity extends BaseActivity implements SwipeRefreshLayout.OnR
         mAdView = (AdView) findViewById(R.id.adView);
         mAdView.loadAd(getAdRequest());
         interstitial = new InterstitialAd(this);
-        interstitial.setAdUnitId("ca-app-pub-4899358131893161/2729545339");
+        interstitial.setAdUnitId(InterstitialAd_KEY);
         if (!interstitial.isLoaded()) {
             loadInterstitialAd();
         }
