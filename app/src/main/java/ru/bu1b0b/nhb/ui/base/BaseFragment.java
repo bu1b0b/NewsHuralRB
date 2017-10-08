@@ -10,23 +10,22 @@ import ru.bu1b0b.nhb.R;
  * Created by bu1b0b on 01.02.2017.
  */
 
-public class BaseFragment  extends Fragment {
+public abstract class BaseFragment extends Fragment {
 
-    public ProgressDialog mProgressDialog;
+    public ProgressDialog progressDialog;
 
     public void showProgressDialog() {
-        if (mProgressDialog == null) {
-            mProgressDialog = new ProgressDialog(getActivity());
-            mProgressDialog.setMessage(getString(R.string.loading));
-            mProgressDialog.setIndeterminate(true);
+        if (progressDialog == null) {
+            progressDialog = new ProgressDialog(getActivity());
+            progressDialog.setMessage(getString(R.string.loading));
+            progressDialog.setIndeterminate(true);
         }
-
-        mProgressDialog.show();
+        progressDialog.show();
     }
 
     public void hideProgressDialog() {
-        if (mProgressDialog != null && mProgressDialog.isShowing()) {
-            mProgressDialog.dismiss();
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
         }
     }
 
@@ -35,5 +34,4 @@ public class BaseFragment  extends Fragment {
         super.onStop();
         hideProgressDialog();
     }
-
 }

@@ -12,13 +12,13 @@ import java.util.List;
 
 import ru.bu1b0b.nhb.R;
 import ru.bu1b0b.nhb.model.News;
-import ru.bu1b0b.nhb.ui.news.NewsActivitity;
+import ru.bu1b0b.nhb.ui.news.NewsActivity;
 
 
 public class MainNewsAdapter extends RecyclerView.Adapter<MainNewsAdapter.NewsViewHolder> {
 
-    private List<News> newsList;
     private Context context;
+    private List<News> newsList;
     private LayoutInflater inflater;
 
     public MainNewsAdapter(Context context, List<News> newsList) {
@@ -36,12 +36,12 @@ public class MainNewsAdapter extends RecyclerView.Adapter<MainNewsAdapter.NewsVi
     @Override
     public void onBindViewHolder(NewsViewHolder holder, final int position) {
         News currentNews = newsList.get(position);
-        holder.news_title.setText(currentNews.getTitle());
-        holder.news_published.setText(currentNews.getPublished());
+        holder.newsTitle.setText(currentNews.getTitle());
+        holder.newsPublished.setText(currentNews.getPublished());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, NewsActivitity.class);
+                Intent intent = new Intent(context, NewsActivity.class);
                 intent.putExtra("newsTitle", newsList.get(position).getTitle());
                 intent.putExtra("newsLink", newsList.get(position).getLinks());
                 intent.putExtra("newsPublished", newsList.get(position).getPublished());
@@ -56,15 +56,15 @@ public class MainNewsAdapter extends RecyclerView.Adapter<MainNewsAdapter.NewsVi
         return newsList.size();
     }
 
-    public class NewsViewHolder extends RecyclerView.ViewHolder {
+    class NewsViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView news_title;
-        public TextView news_published;
+        TextView newsTitle;
+        TextView newsPublished;
 
-        public NewsViewHolder(View itemView) {
+        NewsViewHolder(View itemView) {
             super(itemView);
-            news_title = (TextView) itemView.findViewById(R.id.card_news_title);
-            news_published = (TextView) itemView.findViewById(R.id.card_news_published);
+            newsTitle = (TextView) itemView.findViewById(R.id.card_news_title);
+            newsPublished = (TextView) itemView.findViewById(R.id.card_news_published);
         }
 
     }
