@@ -10,9 +10,6 @@ public class News {
     private String published;
     private String links;
 
-    public News() {
-    }
-
     public String getTitle() {
         return title;
     }
@@ -36,6 +33,4 @@ public class News {
     public void setLinks(String links) {
         this.links = links;
     }
-
-
 }

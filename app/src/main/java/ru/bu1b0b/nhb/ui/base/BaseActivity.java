@@ -5,25 +5,22 @@ import android.support.v7.app.AppCompatActivity;
 
 import ru.bu1b0b.nhb.R;
 
+public abstract class BaseActivity extends AppCompatActivity {
 
-
-public class BaseActivity extends AppCompatActivity {
-
-    public ProgressDialog mProgressDialog;
+    public ProgressDialog progressDialog;
 
     public void showProgressDialog() {
-        if (mProgressDialog == null) {
-            mProgressDialog = new ProgressDialog(this);
-            mProgressDialog.setMessage(getString(R.string.loading));
-            mProgressDialog.setIndeterminate(true);
+        if (progressDialog == null) {
+            progressDialog = new ProgressDialog(this);
+            progressDialog.setMessage(getString(R.string.loading));
+            progressDialog.setIndeterminate(true);
         }
-
-        mProgressDialog.show();
+        progressDialog.show();
     }
 
     public void hideProgressDialog() {
-        if (mProgressDialog != null && mProgressDialog.isShowing()) {
-            mProgressDialog.dismiss();
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
         }
     }
 
@@ -32,6 +29,4 @@ public class BaseActivity extends AppCompatActivity {
         super.onStop();
         hideProgressDialog();
     }
-
-
 }

@@ -22,7 +22,7 @@
     </style>
 
     <style name="PostTitleTextStyle" parent="LargeTextStyle">
-        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
         <item name="android:textStyle">normal</item>
     </style>
 
